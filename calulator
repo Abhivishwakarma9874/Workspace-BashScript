@@ -1,0 +1,51 @@
+#!/bin/sh
+
+
+#Function to perform addition
+
+addition(){
+	result=$((num1+num2))
+}
+
+substraction(){
+	result=$((num1+num2))
+}
+
+multiplication(){
+	result=$((num1*num2))
+}
+
+division(){
+	result=$((num1/num2))
+}
+
+
+echo "Simple Calculator"
+echo "1. Addition"
+echo "2. Subtraction"
+echo "3. Multiplication"
+echo "4. Division"
+
+read -p "Enter your choice (1/2/3/4): " choice
+
+read -p "Enter the number:" num1
+read -p "Enter the number:" num2
+
+case $choice in 
+	1)
+	  addition
+	  ;;
+	2)
+	  subtraction
+	  ;;
+	3)
+	 multiplication
+	  ;;
+	4)
+	 division
+	  ;;
+esac
+
+echo "Result: $result"
+	
+
